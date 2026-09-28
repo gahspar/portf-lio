@@ -37,6 +37,8 @@ npm run start
 - Lavanderia Familiar
 - Gonçalves & Duwe
 - Mecânica Boing
+- Marcenaria Wischral
+- Eu e Tu Lavanderia
 
 ## Publicação
 

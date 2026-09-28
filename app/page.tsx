@@ -44,13 +44,29 @@ const projects = [
     image: "/projects/mecanica-boing.png",
     url: "https://mecanica-boing.vercel.app/",
   },
+  {
+    number: "06",
+    title: "Marcenaria Wischral",
+    category: "Site institucional premium",
+    description: "Uma experiência visual sofisticada para apresentar móveis sob medida, processo de fabricação e atendimento personalizado.",
+    image: "/projects/marcenaria-wischral.png",
+    url: "https://marcenaria-wischral.vercel.app/",
+  },
+  {
+    number: "07",
+    title: "Eu e Tu Lavanderia",
+    category: "Site de serviços",
+    description: "Página comercial clara e acolhedora para uma lavanderia express 24 horas, com vantagens, localização e contato rápido.",
+    image: "/projects/eu-e-tu-lavanderia.png",
+    url: "https://eu-e-tu-lavanderia.vercel.app/",
+  },
 ];
 
 function ProjectSlide({ project, duplicate = false }: { project: (typeof projects)[number]; duplicate?: boolean }) {
   return (
     <article className="carousel-card" aria-hidden={duplicate || undefined}>
       <a className="carousel-visual" href={project.url} target="_blank" rel="noreferrer" tabIndex={duplicate ? -1 : undefined} aria-label={`Abrir ${project.title}`}>
-        <Image src={project.image} alt={duplicate ? "" : `Página inicial do projeto ${project.title}`} fill sizes="(max-width: 720px) 82vw, 760px" priority={!duplicate && project.number === "01"} />
+        <Image src={project.image} alt={duplicate ? "" : `Página inicial do projeto ${project.title}`} fill sizes="(max-width: 720px) 82vw, 760px" loading="eager" priority={!duplicate && project.number === "01"} />
         <span>{project.number}</span>
       </a>
       <div className="carousel-copy">
